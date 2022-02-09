@@ -1,0 +1,167 @@
+/* comentario que se ve en sass y css */
+* {
+  margin: 0;
+  padding: 0; }
+
+.text-center {
+  text-align: center; }
+
+body {
+  background-image: url(https://image.freepik.com/foto-gratis/surtido-pan-horneado_87742-761.jpg);
+  background-size: cover; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+  header .encabezado {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.863); }
+    header .encabezado .logo {
+      width: 10%;
+      padding: 10px; }
+    header .encabezado h1 {
+      color: #4F9532;
+      padding: 20px 70px 5px 0px;
+      text-align: center;
+      font-size: 46px;
+      font-family: 'Roboto', sans-serif; }
+  header .menu {
+    display: flex;
+    list-style: none;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(255, 255, 255, 0.863); }
+    header .menu li {
+      transition: background-color .5s ease; }
+      header .menu li:hover {
+        background-color: rgba(248, 190, 55, 0.836); }
+      header .menu li a {
+        display: block;
+        text-decoration: none;
+        color: black;
+        padding: 15px 20px;
+        font-size: 32px;
+        font-family: 'Roboto', sans-serif; }
+      header .menu li .subMenu {
+        display: none;
+        list-style: none;
+        flex-direction: column;
+        justify-content: space-around;
+        position: absolute;
+        transition: display 3000ms ease;
+        background-color: rgba(255, 255, 255, 0.863); }
+        header .menu li .subMenu li:hover {
+          display: flex;
+          flex-flow: column wrap; }
+        header .menu li .subMenu li a {
+          display: block;
+          padding: 10px;
+          color: black;
+          font-size: 24px;
+          text-decoration: none;
+          font-family: 'Roboto', sans-serif; }
+
+.menuSelected {
+  background-color: rgba(248, 190, 55, 0.836); }
+
+/* media queries encabezado */
+@media (max-width: 768px) {
+  .encabezado {
+    display: block;
+    text-align: center; }
+  .encabezado h1 {
+    padding: 0;
+    margin-top: 10px;
+    font-size: 28px; }
+  .logo {
+    margin-top: 20px;
+    width: 50%; }
+  .menu {
+    display: block;
+    text-align: center; }
+  .menu li {
+    border-bottom: 1px solid black; } }
+
+/* media queries subMenu */
+@media (max-width: 768px) {
+  .subMenu {
+    position: static; } }
+
+/*Grid en todo el main*/
+.mainInicio {
+  display: grid;
+  grid-template-areas: "h2 h2 h2" "video video video" "img1 img2 img3";
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  align-items: center;
+  margin: 0 auto; }
+  .mainInicio h2 {
+    grid-area: h2;
+    margin-bottom: 15px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-top: 30px; }
+  .mainInicio iframe {
+    grid-area: video;
+    border: solid 3px black; }
+  .mainInicio .imagen1 {
+    grid-area: img1;
+    text-align: center; }
+  .mainInicio .imagen2 {
+    grid-area: img2;
+    text-align: center; }
+  .mainInicio .imagen3 {
+    grid-area: img3;
+    text-align: center; }
+
+p {
+  font-family: 'Roboto', sans-serif;
+  text-align: justify;
+  padding: 50px 50px 5px 50px; }
+
+img {
+  width: 60%; }
+
+/* media queries MainiInicio Index */
+@media (max-width: 768px) {
+  .mainInicio {
+    display: block;
+    align-content: center;
+    max-width: 95%;
+    grid-template-columns: 1fr; } }
+
+/* media queries iframe index */
+@media (max-width: 768px) {
+  iframe {
+    max-width: 96%; } }
+
+/*Footer Flex*/
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(255, 255, 255, 0.918);
+  padding: 10px 0px 10px 20px;
+  margin-top: 30px; }
+  footer div {
+    font-family: 'Roboto', sans-serif;
+    font-size: 22px;
+    text-align: center; }
+    footer div h6 {
+      font-family: 'Roboto', sans-serif;
+      text-align: start;
+      font-size: 20px; }
+  footer .socialMedia {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    footer .socialMedia .redSocial {
+      width: 25px;
+      margin: 0px 5px; }
+
+/* media queries footer gral */
+@media (max-width: 768px) {
+  footer div h6 {
+    text-align: center; } }
