@@ -1,0 +1,92 @@
+/* media queries encabezado */
+
+@media (max-width: 768px) {
+    .encabezado {
+        display: block !important;
+        text-align: center;
+
+        h1 {
+            padding: 0;
+            margin-top: 10px;
+            font-size: 28px !important;
+        }
+        .logo  {
+            margin-top: 20px;
+            width: 50% !important;
+        }
+    }
+
+    
+
+    .menu {
+        display: block !important;
+        
+        text-align: center;
+    }
+
+    .menu li{
+        border-bottom: 1px solid black;
+    }
+}
+
+/* media queries subMenu */
+@media (max-width: 768px) {
+    .subMenu {
+        position: static;
+    }
+}
+
+/* media queries MainiInicio Index */
+@media (max-width: 768px) {
+    .mainInicio {
+        display: block;
+        align-content: center;
+        max-width: 95%;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* media queries iframe index */
+@media (max-width: 768px) {
+    iframe {
+        max-width: 96%;
+    }
+}
+
+/* media queries footer gral */
+@media (max-width: 768px) {
+    footer div h6 {
+        text-align: center;
+    }
+}
+
+/* media queries mantenimiento */
+@media (max-width: 768px) {
+    .mantenimiento {
+        display: block;
+    }
+    .serviciosExternos gatito {
+        width: 100%;
+    }
+}
+
+/* media queries nosotros*/
+
+@media (max-width: 768px) {
+    .comisionDirectiva {
+        display: block;
+        align-content: center;
+        max-width: 95%;
+        grid-template-columns: 1fr;
+    }
+}
+
+/* media queries servicios */
+@media (max-width: 768px) {
+    .serviciosExternos {
+        display: block;
+    }
+    .serviciosExternos div {
+        width: 100%;
+    }
+}

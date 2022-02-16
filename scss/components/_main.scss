@@ -1,0 +1,44 @@
+/*Grid en todo el main*/
+
+@import "mixin";
+@import "../base/maps";
+@import "../base/extends";
+
+.mainInicio {
+    @include grid;
+
+    h2 {
+        grid-area: h2;
+        margin-bottom: 15px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 30px;
+        margin-top: 30px;
+    }
+
+    iframe {
+        grid-area: video;
+        @extend %bordes;
+    }
+
+    .imagen1 {
+        @include areaGridNosotros(img1, center);
+    }
+    
+    .imagen2 {
+        @include areaGridNosotros(img2, center);
+    }
+    
+    .imagen3 {
+        @include areaGridNosotros(img3, center);
+    }
+}
+
+p {
+    font-family: 'Roboto', sans-serif;
+    text-align: map-get($map:$textStyles , $key:textJustify );
+    padding: 50px 50px 5px 50px;
+}
+
+img {
+    width: 60%;
+}

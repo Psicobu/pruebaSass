@@ -1,0 +1,55 @@
+/*Pagina Nosotros*/
+
+@import "mixin";
+@import "../base/maps";
+@import "../base/extends";
+
+.parrafoNosotros {
+    p {
+        padding: 0;
+        margin: 0 auto;
+        width: 80%;
+        margin-top: 30px;
+        text-indent: 30px;
+        line-height: 1.5;
+    }
+}
+
+.tituloComision {
+    text-align: map-get($map:$textStyles , $key:textCenter );
+    text-decoration: underline;
+
+}
+
+.comisionDirectiva {
+    @include gridNosotros;
+
+    .imgSecre {
+        @include areaGridNosotros(persona1, center);
+    }
+    
+    .imgSubSecre {
+        @include areaGridNosotros(persona2, center);
+    }
+    
+    .imgTesorero {
+        @include areaGridNosotros(persona3, center);
+    }
+    
+    .imgActas {
+        @include areaGridNosotros(persona4, center);
+    }
+    
+    .imgVocal {
+        @include areaGridNosotros(persona5, center);
+    }
+    
+    .imgAbogado {
+        @include areaGridNosotros(persona6, center);
+    }
+
+    .imgComision {
+        width: 50%;
+        @extend %bordes;
+    }
+}

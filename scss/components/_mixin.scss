@@ -1,0 +1,25 @@
+@mixin grid {
+    display: grid;
+    grid-template-areas: "h2 h2 h2"
+                        "video video video"
+                        "img1 img2 img3";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@mixin gridNosotros {
+    display: grid;
+    grid-template-areas: "persona1 persona2 persona3"
+                        "persona4 persona5 persona6";
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+@mixin areaGridNosotros($area, $align) {
+    grid-area: $area;
+    text-align: $align;
+}

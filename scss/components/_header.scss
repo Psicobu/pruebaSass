@@ -1,0 +1,100 @@
+@import "../base/listas";
+@import "../base/maps";
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+
+body {
+    background-image: url(https://image.freepik.com/foto-gratis/surtido-pan-horneado_87742-761.jpg);
+    background-size: cover;
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+
+    .encabezado {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgba(255, 255, 255, 0.863);
+        .logo {
+            width: 10%;
+            padding: 10px;
+        }
+        h1 {
+            color: #4F9532;
+            padding: 20px 70px 5px 0px;
+            text-align: map-get($map:$textStyles , $key:textCenter );
+            font-size: 46px;
+            font-family: 'Roboto', sans-serif;
+        }
+    }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        flex-direction: row;
+        justify-content: space-around;
+        background-color: rgba(255, 255, 255, 0.863);
+        
+        li {
+            transition: background-color .5s ease;
+            &:hover {
+                background-color: nth($colores, 5);
+            }
+            &:hover ul {
+                display: block;
+            }
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: black;
+                padding: 15px 20px;
+                font-size: 32px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .subMenu {
+                display: none;
+                list-style: none;
+                flex-direction: column;
+                justify-content: space-around;
+                position: absolute;
+                transition: display 3000ms ease;
+                padding: 0;
+                background-color: rgba(255, 255, 255, 0.863);
+                li {
+                    &:hover ul {
+                        display: flex;
+                        flex-flow: column wrap;
+                    }
+
+                    a {
+                        display: block;
+                        padding: 10px;
+                        color: black;
+                        font-size: 24px;
+                        text-decoration: none;
+                        font-family: 'Roboto', sans-serif;
+                    }
+                }
+            }
+        }
+
+
+    }
+}
+
+.menuSelected {
+    background-color: nth($colores, 5);
+}
